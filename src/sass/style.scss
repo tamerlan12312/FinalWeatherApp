@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap');
+
+
+@mixin bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: rgb(6, 178, 221);
+}
+
+.weatherapp{
+    width: 100%;
+    height: 100%;
+    .weatherAppBg{
+        width: 100%;
+        height: auto;
+        background-image: url("../components/assets/rainbg.jpg");
+        @include bg;
+    }
+    .container-fluid{
+        h6{
+           
+            font-family: 'Red Hat Display', sans-serif;
+            color: #fff;
+        }
+        .d-flex{
+            .tempBox{
+                .temph1{
+                    font-family: 'Red Hat Display', sans-serif;
+                    color: #fff;
+                    font-size: 80px;
+                }
+                .temph6{
+                    padding-bottom: 50px;
+                    font-size: 35px;
+                    font-weight: bold;
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                  span{
+                    color:#fff;
+                  }
+                }
+            }
+        }
+         .weatherTemp{
+            .temph1{
+                font-family: 'Red Hat Display', sans-serif;
+                color: #fff;
+                font-size: 80px;
+                margin-left: 20px;
+            }
+         }
+        
+        .weatherDetails{
+            width: 100%;
+            height: auto;
+            background:rgba(110, 110, 110, 0.25);
+            box-shadow:  0 18px 32px 0px  rgba(0, 0, 0, 0.3)  ;
+            backdrop-filter: blur(6px);
+            padding: 4em 4em;
+            transform: translateX(12px);
+           margin-top: -75px;
+            form{
+                .form-control{
+                    height: 50px;
+                    transition: 250ms;
+                    border: none;
+                    background-color: transparent;
+                    border-bottom: 1px solid #fff;
+                    border-radius: 0;
+                     
+                    &::placeholder{
+                        color:rgba($color: #fff, $alpha: .6);
+                    }
+                    &:focus{
+                        outline: none;
+                        box-shadow: none;
+                        border-color:#fff;
+                                           color: #fff;
+                        
+                    &::placeholder{
+                        color:#fff;
+                    }
+                    }
+                }
+            }
+            .detailsh5{
+                color: #fff;
+                padding-top: 40px;
+                padding-bottom: 30px;
+            }
+            
+        }
+       
+    }
+}
+
+.sky{
+    background-image: url("../components/assets/sunnyday.webp");
+         @include bg;
+         transition: .3s;
+}
+.cloud {
+    background-image: url("../components/assets/cloudday.jpg");
+         @include bg;
+         transition: .3s;
+}
+.fewcloud{
+    background-image: url("../components/assets/fewcloudday.jpg");
+         @include bg;
+         transition: .3s;
+}
+.haze{
+    background-image: url("../components/assets/hazeday.webp");
+         @include bg;
+         transition: .3s;
+}
+.rain{
+    background-image: url("../components/assets/rainday.jpg");
+         @include bg;
+         transition: .3s;
+}
+.scattered{
+    background-image: url("../components/assets/scatteredday.jpg");
+         @include bg;
+         transition: .3s;
+}
+.overcast{
+    background-image: url("../components/assets/overcastday.jpg");
+    @include bg;
+    transition: .3s;
+}
+.allbg{
+    background-image: url("../components/assets/rainday.jpg");
+    @include bg;
+    transition: .3s;
+}
+
+html{
+    overflow-x: hidden; 
+  }
+
+@media (max-width:1000px){
+    .weatherapp{
+
+        .container-fluid{
+            .tempBox{
+                .temph1{
+
+                    font-size: 70px !important;
+                    transform: translate(-15px,60px);
+                }
+                .temph6{
+                    transform: translate(-20px,61px);
+                    font-size: 20px !important;
+                    position: relative;
+                    span{
+                        font-size: medium;
+                    }
+                }
+            }
+            .weatherDetails{
+                transform: translateX(0px);
+                margin-top: 80px;
+                .time{
+                    font-size: 30px !important;
+                }
+            }
+        }
+    }
+}
