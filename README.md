@@ -3,7 +3,7 @@
 ## Technology
 ## **Java Script**
 ## **React** 
-## **Bootstrap*
+## **Bootstrap**
 ## **Sass**
 
 ## Contributers: 
