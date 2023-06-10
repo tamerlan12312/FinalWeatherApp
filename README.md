@@ -1,7 +1,7 @@
 # Weather App
 ## This app for weather 
 ## Technology
-## **Java Script**
+## **JavaScript**
 ## **React** 
 ## **Bootstrap**
 ## **Sass**
